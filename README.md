@@ -1,22 +1,8 @@
 goFbAlbum
 ======================
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/toomore/gogrs/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/toomore/gogrs/master/LICENSE)  [![GoDoc](https://godoc.org/github.com/kkdai/goFbAlbum?status.svg)](https://godoc.org/github.com/kkdai/goFbAlbum)
 
 A facebook photo album tool.
-
-
-Examples
----------------
-
-Download all photos from Scottie Pippen facebook pages with 10 workers.
-
-  goFBPages -n=scottiepippen -c=10
-
-
-Snapshot
----------------
-
-![image](snapshot/1.png)
 
 
 Contribute
