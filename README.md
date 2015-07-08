@@ -1,7 +1,7 @@
 goFbAlbum
 ======================
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/toomore/gogrs/master/LICENSE)  [![GoDoc](https://godoc.org/github.com/kkdai/goFbAlbum?status.svg)](https://godoc.org/github.com/kkdai/goFbAlbum)
-
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/toomore/gogrs/master/LICENSE)  [![GoDoc](https://godoc.org/github.com/kkdai/goFbAlbum?status.svg)](https://godoc.org/github.com/kkdai/goFbAlbum)  [![Build Status](https://travis-ci.org/kkdai/goFbAlbum.svg?branch=master)](https://travis-ci.org/kkdai/goFbAlbum)
+ 
 A facebook photo album tool.
 
 
