@@ -12,6 +12,7 @@ func main() {
 	fbAlbum := goFbAlbum.NewFbAlbum(fbToken)
 
 	var targetAlbumId string
+	var albumPhotoCount int
 	var err error
 
 	//Get and display all my albums name
@@ -24,18 +25,21 @@ func main() {
 	for _, album := range myAlbums.Data {
 		fmt.Println(album.Name)
 		targetAlbumId = album.ID
+		albumPhotoCount = album.Count
 		break
 	}
 
+	fmt.Println("album ID:", targetAlbumId)
+
 	//Get and display all photo in first album
-	myPhotos, err := fbAlbum.GetPhotoByAlbum(targetAlbumId)
+	myPhotos, err := fbAlbum.GetPhotoByAlbum(targetAlbumId, albumPhotoCount)
 
 	if err != nil {
 		log.Fatalln("error:", err)
 	}
 
+	fmt.Println("Myphoto:", len(myPhotos.Data))
 	for _, photo := range myPhotos.Data {
-		fmt.Println(photo.Name)
-		break
+		fmt.Println(photo.ID)
 	}
 }

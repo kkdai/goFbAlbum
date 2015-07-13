@@ -3,6 +3,7 @@ package goFbAlbum
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"log"
 
 	fb "github.com/huandu/facebook"
@@ -44,12 +45,13 @@ func (self *FbAlbum) GetAlbumsByUserId(uid string) (*FBAlbums, error) {
 }
 
 // Get all photo from a album id, you can get album id from FBAlbums{} struct.
-func (self *FbAlbum) GetPhotoByAlbum(albumId string) (*FBPhotos, error) {
+func (self *FbAlbum) GetPhotoByAlbum(albumId string, count int) (*FBPhotos, error) {
 	if albumId == "" {
 		return nil, errors.New("albumId is empty")
 	}
 	photoRet := FBPhotos{}
-	resPhoto := self.RunFBGraphAPI("/" + albumId + "/photos")
+	queryString := fmt.Sprintf("/%s/photos?limit=%d", albumId, count)
+	resPhoto := self.RunFBGraphAPI(queryString)
 	ParseMapToStruct(resPhoto, &photoRet)
 	return &photoRet, nil
 }
